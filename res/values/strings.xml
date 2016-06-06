@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smash up</string>
+    <string name="title">Smash up Race Distributor</string>
+    <string name="nb_question">Combien de joueurs ?</string>
+    <string name="player1">Joueur 1 ?</string>
+    <string name="player2">Joueur 2 ?</string>
+    <string name="player3">Joueur 3 ?</string>
+    <string name="player4">Joueur 4 ?</string>
+    <string name="submit">Entrer</string>
+    <string name="redo">Recommencer</string>
+    <string name="shutdown">Quitter</string>
+    
+    <string-array name="basic_races">
+        <item>Pirates</item>
+        <item>Ninja</item>
+        <item>Zombies</item>
+        <item>Robots</item>
+        <item>Dinosaures</item>
+        <item>Sorciers</item>
+        <item>Petit peuple</item>
+        <item>Aliens</item>
+    </string-array>
+
+    <string-array name="extension1">
+        <item>Voyageurs du temps</item>
+        <item>Singes cyborgs</item>
+        <item>Métamorphes</item>
+        <item>Super espions</item>
+    </string-array>
+
+    <string-array name="extension2">
+        <item>Vampires</item>
+        <item>Fourmi géantes</item>
+        <item>Loups-garous</item>
+        <item>Savants fous</item>
+    </string-array>
+
+    <string-array name="extension3">
+        <item>Chats</item>
+        <item>Fées</item>
+        <item>Poneys</item>
+        <item>Princesses</item>
+    </string-array>
+</resources>

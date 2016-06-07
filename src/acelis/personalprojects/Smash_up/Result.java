@@ -14,10 +14,10 @@ public class Result extends Activity {
 
     public Result(Player[] players) {
         this.players = players;
+        setView();
     }
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    private void setView() {
         setContentView(R.layout.result);
 
         showResults();

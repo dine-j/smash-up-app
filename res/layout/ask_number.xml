@@ -30,9 +30,44 @@
 
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:layout_below="@+id/nb_question"
 
             android:inputType="number"
+    />
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/nb_input"
+
+            android:id="@+id/extension1"
+
+            android:text="@string/extension1"
+    />
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/extension1"
+            android:layout_centerVertical="true"
+
+            android:id="@+id/extension2"
+
+            android:text="@string/extension2"
+    />
+
+    <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/extension2"
+
+            android:id="@+id/extension3"
+
+            android:text="@string/extension3"
     />
 
     <Button
@@ -44,7 +79,7 @@
 
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_below="@+id/nb_input"
+            android:layout_below="@+id/extension3"
 
             android:onClick="onClickAskNames"
     />

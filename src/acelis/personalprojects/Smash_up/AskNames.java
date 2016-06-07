@@ -19,11 +19,10 @@ public class AskNames extends Activity {
 
     public AskNames(int numberOfPlayers) {
         this.numberOfPlayers = numberOfPlayers;
+        setView();
     }
 
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
+    private void setView() {
         switch(numberOfPlayers) {
             case 2:
                 setContentView(R.layout.two_players);

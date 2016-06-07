@@ -3,6 +3,9 @@
     <string name="app_name">Smash up</string>
     <string name="title">Smash up Race Distributor</string>
     <string name="nb_question">Combien de joueurs ?</string>
+    <string name="extension1">Série B</string>
+    <string name="extension2">Monstres</string>
+    <string name="extension3">Trop minions</string>
     <string name="player1">Joueur 1 ?</string>
     <string name="player2">Joueur 2 ?</string>
     <string name="player3">Joueur 3 ?</string>

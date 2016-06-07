@@ -5,6 +5,7 @@ import acelis.personalprojects.Smash_up.model.Player;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class Main extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.ask_number);
     }
 
@@ -60,7 +62,7 @@ public class Main extends Activity {
                 setContentView(R.layout.four_players);
                 break;
             default:
-                // TODO: add case default
+                // TODO: add case default - error message for wrong number
                 break;
         }
     }

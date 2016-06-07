@@ -5,8 +5,12 @@ import acelis.personalprojects.Smash_up.model.Player;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main extends Activity {
 
@@ -29,7 +33,7 @@ public class Main extends Activity {
 
     public void onClickDistributeRaces(View view) {
         String[] names = getInputNames();
-        Game startGame = new Game(numberOfPlayers, names);
+        Game startGame = new Game(numberOfPlayers, names, getChosenExtensions());
         setContentView(R.layout.result);
         showResults(startGame.getListOfPlayers());
     }
@@ -83,5 +87,32 @@ public class Main extends Activity {
                 // TODO add default behavior
                 break;
         }
+    }
+
+    public List<String> getChosenExtensions() {
+        List<String> listOfRaces = new ArrayList<>();
+        String[] basicRaces = getResources().getStringArray(R.array.basic_races);
+        for(int i = 0; i < basicRaces.length; ++i) {
+            listOfRaces.add(basicRaces[i]);
+        }
+        if(((CheckBox) findViewById(R.id.extension1)).isChecked()) {
+            String[] extension1 = getResources().getStringArray(R.array.extension1);
+            for(int i = 0; i < extension1.length; ++i) {
+                listOfRaces.add(extension1[i]);
+            }
+        }
+        if(((CheckBox) findViewById(R.id.extension2)).isChecked()) {
+            String[] extension2 = getResources().getStringArray(R.array.extension2);
+            for(int i = 0; i < extension2.length; ++i) {
+                listOfRaces.add(extension2[i]);
+            }
+        }
+        if(((CheckBox) findViewById(R.id.extension3)).isChecked()) {
+            String[] extension3 = getResources().getStringArray(R.array.extension3);
+            for(int i = 0; i < extension3.length; ++i) {
+                listOfRaces.add(extension3[i]);
+            }
+        }
+        return listOfRaces;
     }
 }

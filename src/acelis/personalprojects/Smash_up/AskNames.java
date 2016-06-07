@@ -41,8 +41,8 @@ public class AskNames extends Activity {
 
     public void onClickDistributeRaces(View view) {
         String[] names = getInputNames();
-        Game startGame = new Game(numberOfPlayers, names);
-        Result results = new Result(startGame.getListOfPlayers());
+        //Game startGame = new Game(numberOfPlayers, names);
+        //Result results = new Result(startGame.getListOfPlayers());
     }
 
     private String[] getInputNames() {

@@ -13,36 +13,4 @@
     <string name="submit">Entrer</string>
     <string name="redo">Recommencer</string>
     <string name="shutdown">Quitter</string>
-    
-    <string-array name="basic_races">
-        <item>Pirates</item>
-        <item>Ninja</item>
-        <item>Zombies</item>
-        <item>Robots</item>
-        <item>Dinosaures</item>
-        <item>Sorciers</item>
-        <item>Petit peuple</item>
-        <item>Aliens</item>
-    </string-array>
-
-    <string-array name="extension1">
-        <item>Voyageurs du temps</item>
-        <item>Singes cyborgs</item>
-        <item>Métamorphes</item>
-        <item>Super espions</item>
-    </string-array>
-
-    <string-array name="extension2">
-        <item>Vampires</item>
-        <item>Fourmi géantes</item>
-        <item>Loups-garous</item>
-        <item>Savants fous</item>
-    </string-array>
-
-    <string-array name="extension3">
-        <item>Chats</item>
-        <item>Fées</item>
-        <item>Poneys</item>
-        <item>Princesses</item>
-    </string-array>
 </resources>

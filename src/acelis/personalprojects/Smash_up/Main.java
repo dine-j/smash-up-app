@@ -26,9 +26,11 @@ public class Main extends Activity {
     }
 
     public void onClickAskNames(View view) {
-        EditText inputNumber = (EditText) findViewById(R.id.nb_input);
-        numberOfPlayers = Integer.parseInt(inputNumber.getText().toString());
-        setInputNameView(numberOfPlayers);
+        do {
+            EditText inputNumber = (EditText) findViewById(R.id.nb_input);
+            numberOfPlayers = Integer.parseInt(inputNumber.getText().toString());
+            setInputNameView(numberOfPlayers);
+        } while(numberOfPlayers < 2 || numberOfPlayers > 4);
     }
 
     public void onClickDistributeRaces(View view) {
@@ -36,6 +38,14 @@ public class Main extends Activity {
         Game startGame = new Game(numberOfPlayers, names, getChosenExtensions());
         setContentView(R.layout.result);
         showResults(startGame.getListOfPlayers());
+    }
+
+    public void onClickStartOver(View view) {
+        setContentView(R.layout.ask_number);
+    }
+
+    public void onClickClose(View view) {
+        System.exit(1);
     }
 
     private void setInputNameView(int numberOfPlayers) {
@@ -57,34 +67,34 @@ public class Main extends Activity {
 
     public String[] getInputNames() {
         String[] names = new String[numberOfPlayers];
-        switch(numberOfPlayers) {
-            case 2:
-                names[0] = ((TextView) findViewById(R.id.player1_input)).getText().toString();
-                names[1] = ((TextView) findViewById(R.id.player2_input)).getText().toString();
-                break;
+
+        names[0] = ((TextView) findViewById(R.id.player1_input)).getText().toString();
+        names[1] = ((TextView) findViewById(R.id.player2_input)).getText().toString();
+
+        switch (numberOfPlayers) {
             case 3:
                 names[2] = ((TextView) findViewById(R.id.player3_input)).getText().toString();
                 break;
             case 4:
+                names[2] = ((TextView) findViewById(R.id.player3_input)).getText().toString();
                 names[3] = ((TextView) findViewById(R.id.player4_input)).getText().toString();
+                break;
         }
+
         return names;
     }
 
     private void showResults(Player[] players) {
+        ((TextView) findViewById(R.id.player1)).setText(players[0].toString());
+        ((TextView) findViewById(R.id.player2)).setText(players[1].toString());
+
         switch(players.length) {
-            case 2:
-                ((TextView) findViewById(R.id.player1)).setText(players[0].toString());
-                ((TextView) findViewById(R.id.player2)).setText(players[1].toString());
-                break;
             case 3:
                 ((TextView) findViewById(R.id.player3)).setText(players[2].toString());
                 break;
             case 4:
+                ((TextView) findViewById(R.id.player3)).setText(players[2].toString());
                 ((TextView) findViewById(R.id.player4)).setText(players[3].toString());
-                break;
-            default:
-                // TODO add default behavior
                 break;
         }
     }

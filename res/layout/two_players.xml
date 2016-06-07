@@ -54,11 +54,21 @@
             android:inputType="text"
     />
 
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/player2_input"
+
+            android:id="@+id/extension_question"
+            android:text="@string/extension_question"
+
+    />
+
     <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_below="@+id/nb_input"
+            android:layout_below="@+id/extension_question"
 
             android:id="@+id/extension1"
 
@@ -96,7 +106,7 @@
 
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_below="@+id/player2_input"
+            android:layout_below="@+id/extension3"
 
             android:onClick="onClickDistributeRaces"
     />

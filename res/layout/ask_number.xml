@@ -37,8 +37,6 @@
             android:inputType="number"
     />
 
-
-
     <Button
             android:id="@+id/nb_button"
             android:text="@string/submit"
@@ -48,7 +46,7 @@
 
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
-            android:layout_below="@+id/extension3"
+            android:layout_below="@+id/nb_input"
 
             android:onClick="onClickAskNames"
     />

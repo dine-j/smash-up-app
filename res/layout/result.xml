@@ -54,6 +54,8 @@
 
             android:id="@+id/redo"
             android:text="@string/redo"
+
+            android:onClick="onClickStartOver"
     />
 
     <Button
@@ -64,6 +66,8 @@
 
             android:id="@+id/shutdown"
             android:text="@string/shutdown"
+
+            android:onClick="onClickClose"
     />
 
 </RelativeLayout>
